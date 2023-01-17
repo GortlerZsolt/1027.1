@@ -1,0 +1,345 @@
+* {
+    
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+
+    
+    color: aliceblue;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    width: 100%;
+    height: 100%;
+    
+    background-color: #090f1f;
+}
+
+.index_container {
+    display: grid;
+    grid-template-areas: 
+        "header header"
+        "nav content"
+        "nav footer"
+    ;
+
+    grid-template-columns: 170px 1fr;
+    grid-template-rows: 172px 1fr 20px;
+
+}
+
+@media screen and (max-width: 1024px) {
+    .index_container {
+        display: grid;
+        grid-template-areas: 
+            "header"
+            "nav"
+            "content"
+            "footer"
+        ;
+        
+        grid-template-columns: 100%;
+        grid-template-rows: 173px 50px 1fr 20px;
+    
+    }
+} 
+
+
+header {
+    grid-area: header;
+
+    display: flex;
+    
+}
+
+header h1 {
+    display: inline-block;
+    box-sizing: border-box;
+    
+    margin: 0;
+    margin-top: 0;
+
+    width: 100%;
+    height: 170px;
+
+    margin-top: 0px;
+    padding-top: 25px;
+    text-align: center;
+    font-size: 100px;
+    letter-spacing: 2px;
+
+    color: aliceblue;
+
+    background: linear-gradient(to right,#191654, #43c6ac,#191654);
+
+    
+
+}
+
+header img {
+    display: inline;
+    
+    width: fit-content;
+    box-sizing: border-box;
+    width: 170px;
+}
+
+
+
+main {
+    text-align: center;
+    background: linear-gradient(to right,#191654, #43c6ac,#191654)
+}
+
+section {
+    grid-area: content;
+}
+
+p {
+    display: inline;
+    box-sizing: border-box;
+
+    width: fit-content;
+    height: fit-content;
+
+    text-align: center;
+
+    
+}
+
+section > article{
+    display: inline;
+    margin-top: 20px;
+    margin-left: 20px;
+    
+}
+
+section article a > img {
+    max-width: 100%;
+    height: 250px;
+}
+
+article a img {
+    height: 350px;
+    width: 350px;
+
+    border-radius: 20px;
+}
+
+section  article > * {
+    display: inline;
+    height: 300px;
+    width: 350px;
+}
+
+.songs {
+    display: grid;
+
+    column-gap: 60px;
+    row-gap: 30px;
+
+    grid-template-areas: 
+        "song1 song2 song3 song4"
+        "song5 song6 song7 song8"
+        "song9 song10 song11 song12"
+        "number number number number"
+    ;
+    grid-template-columns: 350px 350px 350px 350px;
+    grid-template-rows: 350px 350px 350px 80px;
+    grid-auto-flow: row;
+
+    justify-content: center;
+    
+    font-family: Calibri, 'Trebuchet MS', sans-serif, 'Gill Sans', 'Gill Sans MT' ;
+}
+
+.songs article p {
+    font-size: 24px;
+}
+
+
+.songs article:hover {
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+.songs article a img:hover{
+    box-shadow: 5px 5px 3px 3px black;
+}
+
+.songs-played {
+    display: grid;
+
+    column-gap: 50px;
+    row-gap: 90px;
+
+    grid-template-areas: 
+        "song1-played song2-played song3-played song4-played"
+        "song5-played song6-played song7-played song8-played"
+        "number number number number"
+    ;
+    grid-template-columns: 350px 350px 350px 350px;
+    grid-template-rows: 350px 350px 350px 50px;
+    grid-auto-flow: row;
+
+    justify-content: center;
+    
+    
+}
+
+.songs-played article:hover {
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+.songs-played article a img:hover{
+    box-shadow: 5px 5px 3px 3px black;
+}
+
+.pagination {
+    display: inline-block;
+
+    grid-area: number;
+
+    width: fit-content;
+    margin-left: 37%;
+    margin-top: 30px;
+    
+}
+
+  
+.pagination a {
+    height: 40px;
+    width: 40px;
+    margin: 0;
+    padding: 0;
+
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    padding-bottom: 0;
+    text-decoration: none;
+
+    background-color: white;
+    border: 1px solid black;
+}
+
+.pagination a:hover {
+    background-color: rgb(202, 202, 202);
+}
+
+
+
+
+nav {
+    grid-area: nav;
+
+    background: linear-gradient(to right,#090f1f, #191654)
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    
+}
+
+nav ul li {
+    width: 150px;
+    margin-top: 20px;
+    margin-left: 10px;
+    padding: 0;
+    justify-content: center;
+
+    
+    
+    height: 30px;
+
+    text-align: center;
+    
+    list-style-type: none;
+
+    font-size: 23px;
+    font-family: Bahnschrift, Malgun Gothic,Franklin Gothic Medium;
+}
+
+nav ul li:hover {
+    margin: 15px 20px 20px 5px;
+}
+
+nav ul li a {
+    display:block;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: black;
+    width: 150px;
+
+    color: aliceblue;
+}
+
+nav ul li a:hover {
+    box-shadow: 5px 5px 3px 3px black;
+}
+
+
+
+.a1{
+    grid-area: song1;
+}
+.a2{
+    grid-area: song2;
+}
+.a3{
+    grid-area: song3;    
+}
+.a4{
+    grid-area: song4;
+}
+.a5{
+    grid-area: song5;
+}
+.a6{
+    grid-area: song6;
+}
+.a7{
+    grid-area: song7;
+}
+.a8{
+    grid-area: song8;
+}
+.a9{
+    grid-area: song9;
+}
+.a1 {
+    grid-area: song10;
+}
+p {
+    width: 100%;
+    grid-area: number;
+}
+
+.a1-played{
+    grid-area: song1-played;
+}
+.a2-played{
+    grid-area: song2-played;
+}
+.a3-played{
+    grid-area: song3-played;    
+}
+.a4-played{
+    grid-area: song4-played;
+}
+.a5-played{
+    grid-area: song5-played;
+}
+.a6-played{
+    grid-area: song6-played;
+}
